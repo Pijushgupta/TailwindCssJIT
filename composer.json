@@ -1,0 +1,21 @@
+{
+    "name": "pijush-gupta/tailwind-jit",
+    "description": "wordpress plugin to generate perpage tailwind css also support JIT",
+    "type": "project",
+    "license": "GPLv2",
+    "autoload": {
+        "psr-4": {
+            "tailwindJIT\\": "core/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pijush Gupta",
+            "email": "Pijush@live.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "symfony/process": "^6.2"
+    }
+}
