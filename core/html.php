@@ -7,10 +7,12 @@ use tailwindJIT\Environment;
 class Html{
     public static function generate(){
         add_action('save_post',array('\tailwindJIT\Html','start'),99,3);
+
     }
 
     public static function start($post_id, $post, $update){
-        if (wp_is_post_autosave($post_ID)) {
+        //TODO: Check if new npx mix watch is already running or not. if running, skip environment build.
+        if (wp_is_post_autosave($post_id)) {
             return;
         }
         if (!$update) { // if new object
@@ -18,6 +20,7 @@ class Html{
         }
         $url = get_permalink($post_id);
         if(self::createFile($url,$post_id) === false) return;
+        
         Environment::build();
        
     }
