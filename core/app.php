@@ -8,6 +8,7 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 if(!file_exists(__DIR__ .DIRECTORY_SEPARATOR. '..' . DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'autoload.php')) return;
 require_once __DIR__ . DIRECTORY_SEPARATOR.'..' . DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'autoload.php';
 use tailwindJIT\backend\Ui;
+use tailwindJIT\backend\Ajax;
 use tailwindJIT\Environment;
 use tailwindJIT\Html;
 use tailwindJIT\Enqueue;
@@ -17,12 +18,13 @@ use tailwindJIT\Enqueue;
  */
  add_action('plugin_loaded',function(){
 
-   Ui::activate();
-
    /**
    * checking if node installed or not.
    */
    if(Environment::check() === false) return;
+
+   Ui::activate();
+  Ajax::do(); 
 
    /**
    * will generate html on post/page/custom_post_type save
