@@ -24,7 +24,7 @@ use tailwindJIT\Enqueue;
    if(Environment::check() === false) return;
 
    Ui::activate();
-  Ajax::do(); 
+   Ajax::do();
 
    /**
    * will generate html on post/page/custom_post_type save

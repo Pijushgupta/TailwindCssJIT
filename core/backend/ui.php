@@ -25,7 +25,7 @@ class Ui{
 
     public static function render(){
         $url = admin_url('admin-ajax.php');
-		$toolkit_nonce = wp_create_nonce('tailwindjit_nonce');
+		$toolkit_nonce = wp_create_nonce('toolkit_nonce');
 		$dashboardLang = explode('_', get_locale())[0];
         printf('<script>
         var toolkit_ajax_path = "%1$s";

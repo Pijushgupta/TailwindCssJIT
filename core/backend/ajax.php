@@ -12,6 +12,7 @@ class Ajax{
     }
 
     public static function getNodeInfo(){
+        if(!wp_verify_nonce($_POST['toolkit_nonce'],'toolkit_nonce'))  wp_die();
         $nodeArray = Environment::getNVersion();
         echo json_encode($nodeArray);
         wp_die();       

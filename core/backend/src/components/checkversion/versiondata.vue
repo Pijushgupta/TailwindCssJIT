@@ -17,10 +17,8 @@ async function getNodeInfo(){
     
     fetch(toolkit_ajax_path,{method:'POST',body:data})
     .then(res => res.json())
-    .then(res => nodedata.value = res )
+    .then(res => nodedata.value = res)
     .catch(err => console.log(err));
-
-
 }
 
 getNodeInfo();

@@ -14,15 +14,9 @@
          </button>
         </label>
         <div v-if="status == true" class="mt-4">
-            <Suspense>
-                <template #default>
+
                     <versiondata/>
-                </template>
-                <template #fallback>
-                    hello...
-                </template>
-            </Suspense>
-            
+
         </div>
     </div>
     
