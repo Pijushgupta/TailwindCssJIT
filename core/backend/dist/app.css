@@ -679,9 +679,6 @@ select {
 .block {
   display: block;
 }
-.inline-block {
-  display: inline-block;
-}
 .inline {
   display: inline;
 }
@@ -690,6 +687,9 @@ select {
 }
 .inline-flex {
   display: inline-flex;
+}
+.hidden {
+  display: none;
 }
 .h-4 {
   height: 1rem;
@@ -714,10 +714,6 @@ select {
 }
 .max-w-5xl {
   max-width: 64rem;
-}
-.max-w-min {
-  max-width: -moz-min-content;
-  max-width: min-content;
 }
 .rotate-90 {
   --tw-rotate: 90deg;
@@ -753,9 +749,6 @@ select {
 .rounded-lg {
   border-radius: 0.5rem;
 }
-.border {
-  border-width: 1px;
-}
 .border-b {
   border-bottom-width: 1px;
 }
@@ -787,9 +780,6 @@ select {
 }
 .p-1 {
   padding: 0.25rem;
-}
-.p-2 {
-  padding: 0.5rem;
 }
 .p-4 {
   padding: 1rem;

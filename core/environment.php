@@ -35,6 +35,16 @@ class Environment{
         return array('node'=>$process->getOutput(), 'npm'=>self::check());
         
     }
+
+    /**
+     * This method to return
+     * @return array npm package and other config
+     */
+    public static function getPackageJsonInfo(){
+        $filePath  = __DIR__ . DIRECTORY_SEPARATOR . 'assets' . DIRECTORY_SEPARATOR . 'package.json';
+        if(!file_exists($filePath)) return false;
+        return json_decode(file_get_contents($filePath));
+    }
     
     /**
      * This to build production ready version of tailwindcss
