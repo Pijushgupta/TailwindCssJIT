@@ -676,6 +676,9 @@ select {
 .mt-5 {
   margin-top: 1.25rem;
 }
+.ml-9 {
+  margin-left: 2.25rem;
+}
 .block {
   display: block;
 }
@@ -687,6 +690,9 @@ select {
 }
 .inline-flex {
   display: inline-flex;
+}
+.table {
+  display: table;
 }
 .hidden {
   display: none;
@@ -800,6 +806,9 @@ select {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
 }
+.pr-4 {
+  padding-right: 1rem;
+}
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -812,6 +821,10 @@ select {
   font-size: 0.75rem;
   line-height: 1rem;
 }
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
 .font-medium {
   font-weight: 500;
 }
@@ -820,6 +833,9 @@ select {
 }
 .font-thin {
   font-weight: 100;
+}
+.capitalize {
+  text-transform: capitalize;
 }
 .text-white {
   --tw-text-opacity: 1;

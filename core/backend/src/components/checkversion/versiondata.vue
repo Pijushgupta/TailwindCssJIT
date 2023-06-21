@@ -1,12 +1,16 @@
 <template>
     <div class="flex justify-start w-1/2">
-        <div class="flex flex-col" :class="nodedata == '' ? 'hidden':''">
-          <span v-if="nodedata.node != false"> Node: {{ nodedata.node }}</span>
-          <span v-if="nodedata.npm != false"> Npm: {{ nodedata.npm }}</span>
+        <div class="flex flex-col ml-9" :class="nodedata == '' ? 'hidden':''">
+          <table>
+            <tr><td class="pr-4 capitalize">Node</td><td>{{ nodedata.node }}</td></tr>
+            <tr><td class="pr-4 capitalize">Npm</td><td>{{ nodedata.npm }}</td></tr>
+            <tr v-if="packageJson != ''" v-for="(i,index) in packageJson" :key="index"><td class="pr-4 capitalize">{{ index }}</td><td>{{ i }}</td></tr>
+          </table>
+          
+
         </div>
-        <div class="flex flex-col" v-if="packageJson != ''">
-          <span v-for="(i,index) in packageJson" :key="index">{{ index }} : {{ i }}</span>
-        </div>
+
+
 
     </div>
     
