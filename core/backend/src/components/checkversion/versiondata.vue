@@ -4,6 +4,9 @@
           <span v-if="nodedata.node != false"> Node: {{ nodedata.node }}</span>
           <span v-if="nodedata.npm != false"> Npm: {{ nodedata.npm }}</span>
         </div>
+        <div class="flex flex-col" v-if="packageJson != ''">
+          <span v-for="(i,index) in packageJson" :key="index">{{ index }} : {{ i }}</span>
+        </div>
 
     </div>
     
@@ -11,7 +14,8 @@
 <script  setup>
 import {ref} from 'vue';
 const nodedata = ref('');
-async function getNodeInfo(){
+const packageJson = ref('');
+function getNodeInfo(){
     const data = new FormData();
     data.append('toolkit_nonce',toolkit_nonce);
     data.append('action','getNodeInfo');
@@ -21,7 +25,10 @@ async function getNodeInfo(){
     .then(res => {
       if(res  !== false){
         nodedata.value = res
-        console.log(nodedata);
+        if(nodedata.value.json.hasOwnProperty('devDependencies')){
+          packageJson.value = nodedata.value.json.devDependencies
+        }
+        //console.log(nodedata.value.json.devDependencies);
         return;
       }
 
