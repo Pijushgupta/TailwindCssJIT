@@ -17155,6 +17155,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var vue_toastification__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-toastification */ "./node_modules/vue-toastification/dist/index.mjs");
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   __name: 'config',
   setup: function setup(__props, _ref) {
@@ -17170,13 +17172,20 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (res) {
         return res.json();
       }).then(function (res) {
-        return console.log(res);
+        if (res == false || res == "false") return;
+        var notification = (0,vue_toastification__WEBPACK_IMPORTED_MODULE_0__.useToast)();
+        notification("Regenerated tailwindcss config", {
+          timeout: 4000
+        });
       })["catch"](function (err) {
         return console.log(err);
       });
     };
     var __returned__ = {
-      regenerateTailwindConfig: regenerateTailwindConfig
+      regenerateTailwindConfig: regenerateTailwindConfig,
+      get useToast() {
+        return vue_toastification__WEBPACK_IMPORTED_MODULE_0__.useToast;
+      }
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
       enumerable: false,

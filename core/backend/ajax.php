@@ -23,8 +23,7 @@ class Ajax{
 
     public static function regenerateTailwindConfig(){
         if(!wp_verify_nonce($_POST['toolkit_nonce'],'toolkit_nonce'))  wp_die();
-        $fileContent = Tailwind::generateConfig(true);
-        Tailwind::createFile($fileContent);
+        echo json_encode(Tailwind::createFile(Tailwind::generateConfig(true)));
         wp_die();
     }
 

@@ -21,13 +21,21 @@
 
 </template>
 <script setup>
+import {useToast} from 'vue-toastification';
+
 const regenerateTailwindConfig = () =>{
   const data = new FormData();
   data.append('toolkit_nonce',toolkit_nonce);
   data.append('action','regenerateTailwindConfig');
   fetch(toolkit_ajax_path,{method:'POST',body:data})
       .then(res => res.json())
-      .then(res => console.log(res))
+      .then(res =>{
+        if(res == false || res == "false") return;
+        const notification =  useToast();
+        notification("Regenerated tailwindcss config",{
+            timeout: 4000
+        });
+      })
       .catch(err => console.log(err));
 }
 

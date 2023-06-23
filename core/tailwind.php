@@ -35,7 +35,7 @@ class Tailwind{
     public static function createFile($content = false){
         if($content == false) return;
         $filePath = __DIR__ . DIRECTORY_SEPARATOR . 'assets' . DIRECTORY_SEPARATOR . 'tailwind.config.js';
-        file_put_contents( $filePath, $content);
+        return file_put_contents( $filePath, $content);
     }
    
 
