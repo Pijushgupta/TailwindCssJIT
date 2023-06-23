@@ -13,6 +13,7 @@ use tailwindJIT\Environment;
 use tailwindJIT\Html;
 use tailwindJIT\Enqueue;
 use tailwindJIT\Tailwind;
+use tailwindJIT\Theme;
 
 /**
  * initializing the plugin
@@ -25,8 +26,17 @@ use tailwindJIT\Tailwind;
    */
    if(Environment::check() === false) return;
 
+   /**
+    * setting up the UI
+    */
    Ui::activate();
+
+   /**
+    * enabling AJAX for the ui
+    */
    Ajax::do();
+
+   Theme::watch();
 
    /**
    * will generate html on post/page/custom_post_type save
