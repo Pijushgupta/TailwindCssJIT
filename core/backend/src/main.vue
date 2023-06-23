@@ -16,7 +16,7 @@
     
     <div class="w-full">
         <div class="bg-white rounded-lg  max-w-5xl mx-auto mt-5 flex flex-col justify-between items-center">
-            <themescan/>
+            <config/>
             <preview/>
             <checkversion/>
         </div>
@@ -26,7 +26,7 @@
 </div>
 </template>
 <script setup>
-import themescan from './components/themescan.vue';
+import config from './components/config.vue';
 import preview from './components/preview.vue';
 import checkversion from './components/checkversion.vue';
 </script>

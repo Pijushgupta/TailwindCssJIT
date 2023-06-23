@@ -15,3 +15,5 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
  */
  if(!file_exists(__DIR__ .DIRECTORY_SEPARATOR.'core'.DIRECTORY_SEPARATOR.'app.php')) return;
  require_once __DIR__.DIRECTORY_SEPARATOR.'core'.DIRECTORY_SEPARATOR.'app.php';
+
+

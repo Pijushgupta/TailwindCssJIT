@@ -4,11 +4,13 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 
 use tailwindJIT\Environment;
+use tailwindJIT\Tailwind;
 
 class Ajax{
 
     public static function do(){
         add_action('wp_ajax_getNodeInfo',array('tailwindJIT\backend\Ajax','getNodeInfo'));
+        add_action('wp_ajax_regenerateTailwindConfig',array('tailwindJIT\backend\Ajax','regenerateTailwindConfig'));
     }
 
     public static function getNodeInfo(){
@@ -17,6 +19,13 @@ class Ajax{
         $nodeArray['json'] = Environment::getPackageJsonInfo();
         echo json_encode($nodeArray);
         wp_die();       
+    }
+
+    public static function regenerateTailwindConfig(){
+        if(!wp_verify_nonce($_POST['toolkit_nonce'],'toolkit_nonce'))  wp_die();
+        $fileContent = Tailwind::generateConfig(true);
+        Tailwind::createFile($fileContent);
+        wp_die();
     }
 
 }
