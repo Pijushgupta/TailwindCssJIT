@@ -17,6 +17,9 @@
     <div class="w-full">
         <div class="bg-white rounded-lg  max-w-5xl mx-auto mt-5 flex flex-col justify-between items-center">
             <config/>
+            <onsave/>
+            <disableglobalstyle />
+            <inlinecss/>
             <preview/>
             <checkversion/>
         </div>
@@ -27,6 +30,9 @@
 </template>
 <script setup>
 import config from './components/config.vue';
+import onsave from './components/onsave.vue';
 import preview from './components/preview.vue';
+import disableglobalstyle from './components/disableglobalstyle.vue';
+import inlinecss from './components/inlinecss.vue';
 import checkversion from './components/checkversion.vue';
 </script>
