@@ -10,9 +10,12 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
  * Tags: css, performance, tailwindcss
  */
 
+if(!defined('TAILWINDJITPATH')) define('TAILWINDJITPATH',plugin_dir_path(__FILE__));
+
 /**
  * Loading the plugin files
  */
+
  if(!file_exists(__DIR__ .DIRECTORY_SEPARATOR.'core'.DIRECTORY_SEPARATOR.'app.php')) return;
  require_once __DIR__.DIRECTORY_SEPARATOR.'core'.DIRECTORY_SEPARATOR.'app.php';
 
