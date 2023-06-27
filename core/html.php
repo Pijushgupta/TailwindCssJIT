@@ -6,8 +6,11 @@ use tailwindJIT\Environment;
 
 class Html{
     public static function generate(){
+        /**
+         * checking if `Update css file on save/update` option is enabled or not.
+         */
+        if(get_option('tailwindJITOnSaveUpdateEvent',false) == false) return;
         add_action('save_post',array('\tailwindJIT\Html','start'),99,3);
-
     }
 
     public static function start($post_id, $post, $update){

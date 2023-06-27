@@ -31,8 +31,8 @@
 <script setup>
 import config from './components/config.vue';
 import onsave from './components/onsave.vue';
-import preview from './components/preview.vue';
 import disableglobalstyle from './components/disableglobalstyle.vue';
 import inlinecss from './components/inlinecss.vue';
+import preview from './components/preview.vue';
 import checkversion from './components/checkversion.vue';
 </script>

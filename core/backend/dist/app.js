@@ -17279,7 +17279,7 @@ __webpack_require__.r(__webpack_exports__);
   setup: function setup(__props, _ref) {
     var __expose = _ref.expose;
     __expose();
-    var inlineCssStatus = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(false);
+    var inlineCss = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(false);
     var getInlineCssStatus = function getInlineCssStatus() {
       var data = new FormData();
       data.append('toolkit_nonce', toolkit_nonce);
@@ -17290,7 +17290,7 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (res) {
         return res.json();
       }).then(function (res) {
-        inlineCssStatus.value = res;
+        inlineCss.value = res;
       })["catch"](function (err) {
         return console.log(err);
       });
@@ -17306,13 +17306,13 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (res) {
         return res.json();
       }).then(function (res) {
-        inlineCssStatus.value = res;
+        inlineCss.value = res;
       })["catch"](function (err) {
         return console.log(err);
       });
     };
     var __returned__ = {
-      inlineCssStatus: inlineCssStatus,
+      inlineCss: inlineCss,
       getInlineCssStatus: getInlineCssStatus,
       setInlineCssStatus: setInlineCssStatus,
       ref: vue__WEBPACK_IMPORTED_MODULE_0__.ref
@@ -17411,9 +17411,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _components_config_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/config.vue */ "./src/components/config.vue");
 /* harmony import */ var _components_onsave_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/onsave.vue */ "./src/components/onsave.vue");
-/* harmony import */ var _components_preview_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/preview.vue */ "./src/components/preview.vue");
-/* harmony import */ var _components_disableglobalstyle_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/disableglobalstyle.vue */ "./src/components/disableglobalstyle.vue");
-/* harmony import */ var _components_inlinecss_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/inlinecss.vue */ "./src/components/inlinecss.vue");
+/* harmony import */ var _components_disableglobalstyle_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/disableglobalstyle.vue */ "./src/components/disableglobalstyle.vue");
+/* harmony import */ var _components_inlinecss_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/inlinecss.vue */ "./src/components/inlinecss.vue");
+/* harmony import */ var _components_preview_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/preview.vue */ "./src/components/preview.vue");
 /* harmony import */ var _components_checkversion_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/checkversion.vue */ "./src/components/checkversion.vue");
 
 
@@ -17429,9 +17429,9 @@ __webpack_require__.r(__webpack_exports__);
     var __returned__ = {
       config: _components_config_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
       onsave: _components_onsave_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-      preview: _components_preview_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-      disableglobalstyle: _components_disableglobalstyle_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-      inlinecss: _components_inlinecss_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+      disableglobalstyle: _components_disableglobalstyle_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+      inlinecss: _components_inlinecss_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+      preview: _components_preview_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
       checkversion: _components_checkversion_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
@@ -17638,9 +17638,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "sr-only peer",
     onClick: $setup.setInlineCssStatus,
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
-      return $setup.inlineCssStatus = $event;
+      return $setup.inlineCss = $event;
     })
-  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $setup.inlineCssStatus]]), _hoisted_5])])]);
+  }, null, 512 /* NEED_PATCH */), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelCheckbox, $setup.inlineCss]]), _hoisted_5])])]);
 }
 
 /***/ }),
